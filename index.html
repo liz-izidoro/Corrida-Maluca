@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Corrida de Carros</title>
+    <!-- Lib -->
+    <script src="./lib/p5.min.js"></script>
+    <script src="./lib/p5.dom.min.js"></script>
+    <script src="./lib/p5.sound.min.js"></script>
+    <script src="./lib/p5.play.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <script src="./js/Game.js"></script>
+    <script src="./js/Form.js"></script>
+    <script src="./js/Player.js"></script>
+
+    <!-- ADICIONAR CODIGO Firebase SDK ABAIXO -->
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+    <script>
+  
+      // Your web app's Firebase configuration
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyB4r3vo6021EJnP3aULUDQA3uq6S59gQv8",
+        authDomain: "corrida-multiplayer-1c8bc.firebaseapp.com",
+        databaseURL: "https://corrida-multiplayer-1c8bc-default-rtdb.firebaseio.com",
+        projectId: "corrida-multiplayer-1c8bc",
+        storageBucket: "corrida-multiplayer-1c8bc.appspot.com",
+        messagingSenderId: "432321864249",
+        appId: "1:432321864249:web:72c00e8f5de32eb70223e8"
+      };
+  
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+   
+  </head>
+  <body>
+    
+    <script src="./sketch.js"></script>
+  </body>
+</html>
