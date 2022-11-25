@@ -15,6 +15,7 @@ class Form {
   display() {
     this.setElementStyle();
     this.setElementPosition();
+    this.handleMousePressed()
   }
 
   setElementStyle() {
@@ -30,5 +31,19 @@ class Form {
     this.titleImg.position(width / 2 - 90, height / 2 - 20);
     this.greeting.position(width / 2 - 300, height/ 2 - 100);
   }
+
+  handleMousePressed() {  
+    this.playButton.mousePressed(()=>{
+      this.input.hide();
+      this.playButton.hide();
+      var message = `
+      Ola, ${this.input.value()}!
+      < /br> Aguarde o proximo jogador.`;
+      this.greeting.html(message); 
+    });
+
+  }
+
+
 
 }
