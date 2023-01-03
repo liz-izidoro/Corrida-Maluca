@@ -26,10 +26,10 @@ class Form {
   }
 
   setElementPosition() {
-    this.input.position(120, 160);
-    this.playButton.position(width / 2 - 110, height / 2 - 80);
-    this.titleImg.position(width / 2 - 90, height / 2 - 20);
-    this.greeting.position(width / 2 - 300, height/ 2 - 100);
+    this.titleImg.position(120,50);
+    this.input.position(width / 2 - 110, height / 2 - 80);
+    this.playButton.position(width / 2 - 90, height / 2 - 20);
+    this.greeting.position(width / 2 - 300, height / 2 - 100);
   }
 
   handleMousePressed() {  
@@ -39,7 +39,13 @@ class Form {
       var message = `
       Ola, ${this.input.value()}!
       < /br> Aguarde o proximo jogador.`;
-      this.greeting.html(message); 
+      this.greeting.html(message);
+
+      playerCount += 1;
+      player.name = this.input.value();
+      player.id = playerCount;
+      player.addPlayer();
+      player.updatePlayerCount(playerCount);
     });
 
   }
